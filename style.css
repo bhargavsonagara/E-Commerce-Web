@@ -130,6 +130,14 @@ p {
   margin-bottom: 100px;
 }
 
+/* Modal */
+.modals>i{
+  color: rgb(218, 83, 49);
+}
+.modals>img{
+  border-radius: 100%;
+}
+
 /* Footer */
 .footer-brand {
   font-size: 24px;
