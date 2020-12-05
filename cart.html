@@ -167,6 +167,27 @@
 		</div>
     </div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="google_play" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sorry...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            Our Team Working On It.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <!--Footer-->
     <footer style="background-color: rgb(1,0,1);">
         <div class="container pt-5" style="padding-bottom: 16px;">
@@ -176,10 +197,10 @@
                     <p class="text-muted mb-4">Download App for Android and ios mobile phone.</p>
                     <div class="row c_9">
                         <div class="col-6 col-sm-6">
-                            <a href="" class="text-decoration-none"><img src="images/play-store.png" class="img-fluid d-block"></a>
+                            <a href="#google_play" data-toggle="modal" class="text-decoration-none"><img src="images/play-store.png" class="img-fluid d-block"></a>
                         </div>
                         <div class="col-6 col-sm-6">
-                            <a href="" class="text-decoration-none"><img src="images/app-store.png" class="img-fluid d-block img_5"></a>
+                            <a href="#google_play" data-toggle="modal" class="text-decoration-none"><img src="images/app-store.png" class="img-fluid d-block img_5"></a>
                         </div>
                     </div>      
                 </div>
@@ -212,6 +233,7 @@
         </div>
     </footer>
 
+
     <!--jquery Script Link-->
     <script src="js/jquery-3.5.1.js"></script>
     
@@ -220,14 +242,5 @@
     
     <!--Bootstrap JS Script Link-->
     <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        var textDeco = document.getElementsByClassName("textDeco");
-        var remove = document.getElementById("remove");
-        textDeco.onclick() = function(){
-            remove.style.display = "none";
-        }
-
-    </script>
 </body>
-</html>
+</html> 
