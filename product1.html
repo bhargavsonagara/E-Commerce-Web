@@ -153,7 +153,6 @@
 		</div>
     </div>
 
-
     <!-- Modal -->
     <div class="modal fade" id="google_play" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -218,7 +217,22 @@
             <p class="text-center text-muted p_1 pb-1" style="margin-bottom: -8px">Copyright &copy; 2020 - Designed and Developed by <a href="index.html" class="text-decoration-none text-muted">BHARGAV'S</a></p>
         </div>
     </footer>
-
+    <script>
+        var ProductImage = document.getElementById("ProductImage");
+        var SmallImage = document.getElementsByClassName("SmallImage");
+        SmallImage[0].onclick = function(){
+            ProductImage.src = SmallImage[0].src;
+        }
+        SmallImage[1].onclick = function(){
+            ProductImage.src = SmallImage[1].src;
+        }
+        SmallImage[2].onclick = function(){
+            ProductImage.src = SmallImage[2].src;
+        }
+        SmallImage[3].onclick = function(){
+            ProductImage.src = SmallImage[3].src;
+        }
+    </script>
 
     <!--jquery Script Link-->
     <script src="js/jquery-3.5.1.js"></script>
@@ -229,4 +243,4 @@
     <!--Bootstrap JS Script Link-->
     <script src="js/bootstrap.min.js"></script>
 </body>
-</html> 
+</html>
