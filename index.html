@@ -45,7 +45,7 @@
                 <div class="col-12 col-sm-6 my-auto">
                     <h1 class="">Give Your Workout A New Style!</h1>
                     <p class="text-muted mt-2">Success isn't always about greatness.it's about consistency.Consistent hard work gains success. Greatness will come.</p>
-                    <button type="button" class="btn btn-warning mt-2"><span class="mx-2">Explore Now<i class="fas fa-long-arrow-alt-right ml-1"></i></span></button>
+                    <button type="button" class="btn btn-warning mt-2" data-target="#explore" data-toggle="modal"><span class="mx-2">Explore Now<i class="fas fa-long-arrow-alt-right ml-1"></i></span></button>
                 </div>
                 <div class="col-12 col-sm-6">
                     <img src="images/image1.png" class="img-fluid d-block img_6">
@@ -79,7 +79,7 @@
                 <a href="product1.html" class="text-decoration-none">
                     <div class="card border-0 mb-4">
                         <div class="card-img">
-                            <img src="images/product-1.jpg" class="img-fluid d-block w-100">
+*                            <img src="images/product-1.jpg" class="img-fluid d-block w-100">
                         </div>
                         <p class="card-title text-muted mt-1">Red Printed T-Shirt</p>
                         <span class="star"><i class="fas fa-star mr-1 mb-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="far fa-star"></i></span>   
@@ -243,7 +243,7 @@
                     <p class="text-muted mt-5">Exclusive Available on Bhargav's</p>
                     <h1 class="mb-4">Smart Band 4</h1>
                     <p class="text-muted mt-2 mb-3">Success isn't always about greatness.it's about consistency.Consistent hard work gains success. Greatness will come.</p>
-                    <button type="button" class="btn btn-warning mt-2"><span class="mx-2">Buy Now<i class="fas fa-long-arrow-alt-right ml-1"></i></span></button>
+                    <button type="button" class="btn btn-warning mt-2" data-target="#smart_band" data-toggle="modal"><span class="mx-2">Buy Now<i class="fas fa-long-arrow-alt-right ml-1"></i></span></button>
                 </div>
             </div>
         </div>
@@ -330,6 +330,66 @@
 		</div>
     </div>
     
+    <!-- Modal -->
+    <div class="modal fade" id="smart_band" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Oppssss...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            Out Of Stock.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="explore" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sorry...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            You Have Explore Too Much. Leave it Now.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="google_play" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sorry...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            Our Team Working On It.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <!--Footer-->
     <footer style="background-color: rgb(1,0,1);">
         <div class="container pt-5" style="padding-bottom: 16px;">
@@ -339,10 +399,10 @@
                     <p class="text-muted mb-4">Download App for Android and ios mobile phone.</p>
                     <div class="row c_9">
                         <div class="col-6 col-sm-6">
-                            <a href="" class="text-decoration-none"><img src="images/play-store.png" class="img-fluid d-block"></a>
+                            <a href="#google_play" data-toggle="modal" class="text-decoration-none"><img src="images/play-store.png" class="img-fluid d-block"></a>
                         </div>
                         <div class="col-6 col-sm-6">
-                            <a href="" class="text-decoration-none"><img src="images/app-store.png" class="img-fluid d-block img_5"></a>
+                            <a href="#google_play" data-toggle="modal" class="text-decoration-none"><img src="images/app-store.png" class="img-fluid d-block img_5"></a>
                         </div>
                     </div>      
                 </div>
