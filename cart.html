@@ -211,10 +211,10 @@
                 <div class="col-12 col-sm-3 text-white text-center">
                     <h4 class="mb-4">Useful Links</h4>
                     <p class="c_11">
-                        <a href="" class="text-decoration-none text-muted">Coupons</a><br>
-                        <a href="" class="text-decoration-none text-muted">Blog Post</a><br>
-                        <a href="" class="text-decoration-none text-muted">Return Policy</a><br>
-                        <a href="" class="text-decoration-none text-muted">Join Affiliate</a>
+                        <a href="#google_play" data-toggle="modal" class="text-decoration-none text-muted">Coupons</a><br>
+                        <a href="#google_play" data-toggle="modal" class="text-decoration-none text-muted">Blog Post</a><br>
+                        <a href="#google_play" data-toggle="modal" class="text-decoration-none text-muted">Return Policy</a><br>
+                        <a href="#google_play" data-toggle="modal" class="text-decoration-none text-muted">Join Affiliate</a>
                     </p>
                 </div>
                 <div class="col-12 col-sm-3 text-white text-center">
@@ -232,7 +232,12 @@
             <p class="text-center text-muted p_1 pb-1" style="margin-bottom: -8px">Copyright &copy; 2020 - Designed and Developed by <a href="index.html" class="text-decoration-none text-muted">BHARGAV'S</a></p>
         </div>
     </footer>
-
+    <script>
+        var textDeco = document.getElementsByClassName("textDeco");
+        textDeco.onclick() = function(){
+            textDeco.style.display = "none";
+        }
+    </script>
 
     <!--jquery Script Link-->
     <script src="js/jquery-3.5.1.js"></script>
