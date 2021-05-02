@@ -66,65 +66,65 @@
                     <div class="col-12 col-sm-8 mt-2">
                         <p class="text-muted ca_1">Red Printed T-Shirt</p>
                         <p class="text-muted">Price: $50.00</p>
-                        <small><a href="" style="color: #ff523b;" class="text-decoration-none textDeco">Remove</a></small>
+                        <small><input type="button" style="color: #ff523b;" class="text-decoration-none button" onclick="textDeco()" value="Remove"></small>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 text-right">
-                <div class="row inp_1">
+                <div class="row inp_1" id="removes">
                     <div class="col-6 col-sm-6 text-left">
-                        <input type="number" value="1" class="inp mb-4 mt-3">
+                        <input type="number" id="inp1" class="inp mb-4 mt-3"><input type="button" class="inp ml-2 bg-white" value="++" onclick="inc1()">
                     </div>
                     <div class="col-6 col-sm-6 my-auto">
-                        <p class="text-muted ca_2">$50.00</p>
+                        <p class="text-muted ca_2">$<input type="button" class="text-decoration-none button text-muted pl-0" id="sub1"></p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-6 col-sm-6">
-                <div class="row">
+                <div class="row" id="remove1">
                     <div class="col-12 col-sm-4">
                         <img src="images/product-2.jpg" class="img-fluid d-block w-75 img_2">
                     </div>
                     <div class="col-12 col-sm-8 mt-3">
                         <p class="text-muted ca_1">HRX Sports Shoes</p>
                         <p class="text-muted">Price: $75.00</p>
-                        <small><a href="" class="text-decoration-none" style="color: #ff523b;">Remove</a></small>
+                        <small><input type="button" style="color: #ff523b;" class="text-decoration-none button" onclick="textDeco1()" value="Remove"></small>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 text-right">
-                <div class="row inp_2">
+                <div class="row inp_2" id="removes1">
                     <div class="col-6 col-sm-6 text-left">
-                        <input type="number" value="1" class="inp mb-4 mt-3">
+                        <input type="number" value="1" id="inp2" class="inp mb-4 mt-3"><input type="button" class="inp ml-2 bg-white" value="++" onclick="inc2()">
                     </div>
                     <div class="col-6 col-sm-6 my-auto">
-                        <p class="text-muted ca_2">$75.00</p>
+                        <p class="text-muted ca_2">$<input type="button" class="text-decoration-none button text-muted pl-0" id="sub2" value="75"></p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-6 col-sm-6">
-                <div class="row">
+                <div class="row" id="remove2">
                     <div class="col-12 col-sm-4">
                         <img src="images/product-3.jpg" class="img-fluid d-block w-75 img_2">
                     </div>
                     <div class="col-12 col-sm-8 mt-2">
                         <p class="text-muted ca_1">HRX Gray Trackpants</p>
                         <p class="text-muted">Price: $45.00</p>
-                        <small><a href="" style="color: #ff523b;" class="text-decoration-none">Remove</a></small>
+                        <small><input type="button" style="color: #ff523b;" class="text-decoration-none button" onclick="textDeco2()" value="Remove"></small>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 text-right">
-                <div class="row inp_3">
+                <div class="row inp_3" id="removes2">
                     <div class="col-6 col-sm-6 text-left">
-                        <input type="number" value="1" class="inp mb-4 mt-3">
+                        <input type="number" value="1" id="inp3" class="inp mb-4 mt-3"><input type="button" class="inp ml-2 bg-white" value="++" onclick="inc3()">
                     </div>
                     <div class="col-6 col-sm-6 my-auto">
-                        <p class="text-muted ca_2">$45.00</p>
+                        <p class="text-muted ca_2">$<input type="button" class="text-decoration-none button text-muted pl-0" id="sub3" value="45"></p>
                     </div>
                 </div>
                 <hr class="mt-5 w-100">
@@ -133,19 +133,19 @@
                         <p class="text-dark ca_2">Subtotal</p>
                     </div>
                     <div class="col-6 col-sm-6">
-                        <p class="text-muted ca_2">$200.00</p>
+                        <p class="text-muted ca_2">$<input type="button" class="text-decoration-none button text-muted pl-0" id="subTotal"></p>
                     </div>
                     <div class="col-6 col-sm-6 text-left">
                         <p class="text-dark ca_2">Tax</p>
                     </div>
                     <div class="col-6 col-sm-6">
-                        <p class="text-muted ca_2">$35.00</p>
+                        <p class="text-muted ca_2">$<input type="button" class="text-decoration-none button text-muted pl-0" value="35"></p>
                     </div>
                     <div class="col-6 col-sm-6 text-left">
                         <p class="text-dark ca_2">Total</p>
                     </div>
                     <div class="col-6 col-sm-6">
-                        <p class="text-muted ca_2">$230.00</p>
+                        <p class="text-muted ca_2">$<input type="button" class="text-decoration-none button text-muted pl-0" id="total"></p>
                     </div>
                 </div>
             </div>
@@ -233,10 +233,77 @@
         </div>
     </footer>
     <script>
-        var textDeco = document.getElementsByClassName("textDeco");
-        textDeco.onclick() = function(){
-            textDeco.style.display = "none";
+        function textDeco() {
+            const remove = document.getElementById("remove");
+            const parent = remove.parentNode;
+            parent.removeChild(remove);
+
+            const removes = document.getElementById("removes");
+            const parents = removes.parentNode;
+            parents.removeChild(removes); 
         }
+
+        function textDeco1() {
+            const remove1 = document.getElementById("remove1");
+            const parent1 = remove1.parentNode;
+            parent1.removeChild(remove1);
+
+            const removes1 = document.getElementById("removes1");
+            const parents1 = removes1.parentNode;
+            parents1.removeChild(removes1); 
+        }
+
+        function textDeco2() {
+            const remove2 = document.getElementById("remove2");
+            const parent2 = remove2.parentNode;
+            parent2.removeChild(remove2);
+
+            const removes2 = document.getElementById("removes2");
+            const parents2 = removes2.parentNode;
+            parents2.removeChild(removes2); 
+        }
+        
+        
+        document.getElementById('inp1').defaultValue = 1;
+        document.getElementById('sub1').defaultValue = 50;
+
+        var sub1 = document.getElementById('sub1').value;
+        var sub2 = document.getElementById('sub2').value;
+        var sub3 = document.getElementById('sub3').value;
+        var inc1 = () => {
+            var inp1 = document.getElementById("inp1").value++;
+            var sub1 = 50 * document.getElementById('inp1').value;
+            document.getElementById('sub1').value = sub1;
+            document.getElementById('subTotal').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3);
+            document.getElementById('total').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3) + parseInt(35);
+        }
+        
+        document.getElementById('inp2').defaultValue = 1;
+        document.getElementById('sub2').defaultValue = 75;
+        var inc2 = () => {
+            var inp2 = document.getElementById("inp2").value++;
+            var sub2 = 75 * document.getElementById('inp2').value;
+            document.getElementById('sub2').value = sub2;
+            document.getElementById('subTotal').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3); 
+            document.getElementById('total').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3) + parseInt(35);
+        }
+        
+        
+        document.getElementById('inp3').defaultValue = 1;
+        document.getElementById('sub3').defaultValue = 45;
+        var inc3 = () => {
+            var inp3 = document.getElementById("inp3").value++;
+            var sub3 = 45 * document.getElementById('inp3').value;
+            document.getElementById('sub3').value = sub3;
+            document.getElementById('subTotal').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3); 
+            document.getElementById('total').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3) + parseInt(35);
+        }
+
+
+        document.getElementById('subTotal').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3); 
+        document.getElementById('total').value = parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3) + parseInt(35); 
+ 
+
     </script>
 
     <!--jquery Script Link-->
